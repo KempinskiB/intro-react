@@ -39,6 +39,7 @@ class App extends React.Component {
       students: this.state.students.concat(studentName)
     });
   }
+
   addGrade(assignment, student, score) {
     let grades = this.state.grades;
     let assignmentName = assignment;
@@ -66,11 +67,10 @@ class App extends React.Component {
     }
 
     /* Change below to render students*/
-
     if (this.state.buttonClicked === "students") {
       tabChoice = (
         <List
-          placeholder="Add Students" 
+          placeholder="Add Student..." 
           currList={this.state.students}
           addFunction={this.addStudent}
           title="Student Roster"
